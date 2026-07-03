@@ -26,7 +26,7 @@ export default function ProjectCard({ project }: Props) {
       {/* IMAGE */}
       <div className="relative overflow-hidden">
         <Image
-          src={project.image}
+          src={project.cover}
           alt={project.title}
           width={800}
           height={450}
