@@ -40,7 +40,7 @@ export default function NotFound() {
 
         <div className="mt-10 inline-flex items-center gap-2 rounded-full border border-yellow-400/20 bg-yellow-400/10 px-5 py-3 text-yellow-300">
           <Sparkles size={18} />
-          <span>Still cooking something amazing... 🚧✨</span>
+          <span>Still cooking something amazing...</span>
         </div>
 
         <div className="mt-12">
