@@ -19,13 +19,13 @@ export const projects = [
 
     demo: "",
 
-    cover: "/projects/cropeye.png",
+    cover: "/projects/cropeye/cropeye.png",
 
     gallery: [
-      "/projects/cropeye1.png",
-      "/projects/cropeye2.png",
-      "/projects/cropeye3.png",
-      "/projects/cropeye4.png",
+      "/projects/cropeye/cropeye1.png",
+      "/projects/cropeye/cropeye2.png",
+      "/projects/cropeye/cropeye3.png",
+      "/projects/cropeye/cropeye4.png",
     ],
 
     technologies: [
@@ -66,13 +66,13 @@ export const projects = [
 
     demo: "",
 
-    cover: "/projects/talktiles.png",
+    cover: "/projects/talktiles/talktiles.png",
 
     gallery: [
-      "/projects/talktiles1.png",
-      "/projects/talktiles2.png",
-      "/projects/talktiles3.png",
-      "/projects/talktiles4.png",
+      "/projects/talktiles/talktiles1.png",
+      "/projects/talktiles/talktiles2.png",
+      "/projects/talktiles/talktiles3.png",
+      "/projects/talktiles/talktiles4.png",
     ],
 
     technologies: [
@@ -113,13 +113,13 @@ export const projects = [
 
     demo: "",
 
-    cover: "/projects/qms.png",
+    cover: "/projects/qms/qms.png",
 
     gallery: [
-      "/projects/qms1.png",
-      "/projects/qms2.png",
-      "/projects/qms3.png",
-      "/projects/qms4.png",
+      "/projects/qms/qms1.png",
+      "/projects/qms/qms2.png",
+      "/projects/qms/qms3.png",
+      "/projects/qms/qms4.png",
     ],
 
     technologies: [
