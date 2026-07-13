@@ -134,28 +134,6 @@ public/
 
 ---
 
-## 📸 Screenshots
-
-> Add screenshots of your portfolio here.
-
-```
-public/screenshots/
-```
-
-Example:
-
-```
-![Home](public/screenshots/home.png)
-```
-
-or
-
-```
-![Projects](public/screenshots/projects.png)
-```
-
----
-
 ## 📄 License
 
 This project is open source and available under the MIT License.
@@ -168,8 +146,8 @@ This project is open source and available under the MIT License.
 
 Bachelor of Science in Information Technology
 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/Jareth-Baur
 
-Portfolio: https://yourportfolio.com
+Portfolio: https://jareth-baur.vercel.app/
 
-Email: your@email.com
+Email: jareth.baur.dev@gmail.com
