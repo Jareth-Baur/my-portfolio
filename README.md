@@ -54,7 +54,7 @@ public/
 ### Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/my-portfolio.git
+git clone https://github.com/Jareth-Baur/my-portfolio.git
 ```
 
 ### Navigate to the project
