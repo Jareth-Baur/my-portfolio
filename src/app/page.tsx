@@ -7,6 +7,7 @@ import Skills from "@/components/skills/Skills";
 import Timeline from "@/components/timeline/Timeline";
 import Contact from "@/components/contact/Contact";
 import Footer from "@/components/layout/Footer";
+import CTA from "@/components/cta/CTA";
 export default function Home() {
   return (
     <main>
@@ -25,6 +26,8 @@ export default function Home() {
       <Timeline />
 
       <Contact />
+
+      <CTA />
 
       <Footer />
     </main>

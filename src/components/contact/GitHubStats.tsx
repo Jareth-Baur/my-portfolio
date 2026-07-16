@@ -6,7 +6,7 @@ export default function GitHubStats() {
       {/* GitHub Stats */}
       <div className="group overflow-hidden rounded-3xl border border-white/10 bg-slate-900/50 p-4 backdrop-blur-xl transition duration-300 hover:border-blue-500/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)]">
         <Image
-          src="https://github-readme-stats.vercel.app/api?username=Jareth-Baur&show_icons=true&theme=transparent&hide_border=true&rank_icon=github"
+          src="https://github-readme-stats-one-bice.vercel.app/api?username=Jareth-Baur&show_icons=true&theme=transparent&hide_border=true"
           alt="GitHub Stats"
           width={700}
           height={350}
@@ -30,7 +30,7 @@ export default function GitHubStats() {
       {/* Languages */}
       <div className="group overflow-hidden rounded-3xl border border-white/10 bg-slate-900/50 p-4 backdrop-blur-xl transition duration-300 hover:border-blue-500/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] lg:col-span-2">
         <Image
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jareth-Baur&layout=compact&theme=transparent&hide_border=true"
+          src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=Jareth-Baur&layout=compact&theme=transparent&hide_border=true"
           alt="Top Languages"
           width={900}
           height={350}
