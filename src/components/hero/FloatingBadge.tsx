@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 interface FloatingBadgeProps {
   icon: React.ReactNode;
-  title: string;
   className?: string;
   reverseDuration?: number;
   reverseDirection?: 1 | -1;
@@ -12,7 +11,6 @@ interface FloatingBadgeProps {
 
 export default function FloatingBadge({
   icon,
-  title,
   className = "",
   reverseDuration = 35,
   reverseDirection = -1,
@@ -20,12 +18,11 @@ export default function FloatingBadge({
   return (
     <motion.div
       whileHover={{
-        scale: 1.12,
-        y: -4,
+        scale: 1.25,
       }}
       animate={{
-        scale: [1, 1.03, 1],
         rotate: reverseDirection * 360,
+        scale: [1, 1.08, 1],
       }}
       transition={{
         rotate: {
@@ -42,28 +39,26 @@ export default function FloatingBadge({
       className={`
         absolute
         flex
+        h-14
+        w-14
         items-center
-        gap-2
+        justify-center
         rounded-full
         border
         border-white/10
-        bg-slate-900/70
-        px-4
-        py-2
+        bg-slate-900/80
         backdrop-blur-xl
         shadow-lg
         transition-all
         duration-300
-        hover:border-blue-400
-        hover:shadow-[0_0_30px_rgba(59,130,246,0.4)]
+        hover:border-blue-500
+        hover:shadow-[0_0_25px_rgba(59,130,246,.45)]
         ${className}
       `}
     >
-      <span className="text-lg text-blue-400">{icon}</span>
-
-      <span className="whitespace-nowrap text-sm font-medium">
-        {title}
-      </span>
+      <div className="text-3xl">
+        {icon}
+      </div>
     </motion.div>
   );
 }
