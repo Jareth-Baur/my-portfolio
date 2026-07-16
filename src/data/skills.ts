@@ -4,7 +4,7 @@ export const skillCategories = [
     skills: [
       { name: "Next.js", icon: "nextjs" },
       { name: "React", icon: "react" },
-      { name: "Tailwind CSS", icon: "tailwind" },
+      { name: "Tailwind", icon: "tailwind" },
       { name: "TypeScript", icon: "typescript" },
     ],
   },
