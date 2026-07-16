@@ -4,6 +4,7 @@ import {
   motion,
   useMotionTemplate,
   useMotionValue,
+  Variants,
 } from "framer-motion";
 
 import {
@@ -42,12 +43,30 @@ const iconMap = {
   github: SiGithub,
 };
 
+const cardVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+    scale: 0.97,
+  },
+
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+
+    transition: {
+      duration: 0.5,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
 interface Props {
   name: string;
   icon: SkillIcon;
   description: string;
   level: SkillLevel;
-  index: number;
 }
 
 export default function SkillCard({
@@ -55,7 +74,6 @@ export default function SkillCard({
   icon,
   description,
   level,
-  index,
 }: Props) {
   const Icon = iconMap[icon];
 
@@ -87,44 +105,35 @@ export default function SkillCard({
 
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        y: 35,
-        scale: 0.95,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        scale: 1,
-      }}
-      viewport={{
-        once: false,
-        amount: 0.25,
-      }}
-      transition={{
-        duration: 0.5,
-        delay: index * 0.07,
-        ease: [0.22, 1, 0.36, 1],
-      }}
+      variants={cardVariants}
       whileHover={{
-        y: -8,
+        y: -6,
       }}
       onMouseMove={handleMouseMove}
       className="
         group
         relative
         h-full
+        min-w-0
         overflow-hidden
         rounded-2xl
         border
-        border-white/10
-        bg-slate-900/60
-        p-6
+        border-slate-200
+        bg-white/80
+        p-5
+        shadow-sm
         backdrop-blur-xl
         transition-colors
         duration-500
+
+        dark:border-white/10
+        dark:bg-slate-900/60
+        dark:shadow-none
+
         hover:border-blue-500/40
         hover:shadow-[0_0_40px_rgba(59,130,246,0.12)]
+
+        sm:p-6
       "
     >
       {/* Mouse Glow */}
@@ -137,10 +146,14 @@ export default function SkillCard({
           pointer-events-none
           absolute
           inset-0
+          hidden
           opacity-0
           transition-opacity
           duration-500
+
           group-hover:opacity-100
+
+          md:block
         "
       />
 
@@ -160,6 +173,7 @@ export default function SkillCard({
           to-transparent
           transition-all
           duration-500
+
           group-hover:via-blue-400/70
         "
       />
@@ -168,7 +182,7 @@ export default function SkillCard({
 
         {/* Icon + Level */}
 
-        <div className="flex items-start justify-between gap-4">
+        <div className="flex items-start justify-between gap-3">
 
           <motion.div
             whileHover={{
@@ -180,47 +194,65 @@ export default function SkillCard({
             }}
             className="
               flex
-              h-14
-              w-14
+              h-12
+              w-12
+              shrink-0
               items-center
               justify-center
               rounded-xl
               border
-              border-white/10
-              bg-white/5
+              border-slate-200
+              bg-slate-100
               transition-colors
               duration-300
+
+              dark:border-white/10
+              dark:bg-white/5
+
               group-hover:border-blue-500/30
               group-hover:bg-blue-500/10
+
+              sm:h-14
+              sm:w-14
             "
           >
             <Icon
-              size={30}
+              size={28}
               className="
-                text-slate-300
+                text-slate-600
                 transition-colors
                 duration-300
-                group-hover:text-blue-400
+
+                dark:text-slate-300
+
+                group-hover:text-blue-600
+                dark:group-hover:text-blue-400
               "
             />
           </motion.div>
 
+          {/* Level */}
+
           <span
             className="
+              shrink-0
               rounded-full
               border
-              border-white/10
-              bg-white/5
-              px-3
+              border-slate-200
+              bg-slate-100
+              px-2.5
               py-1
-              text-[11px]
+              text-[10px]
               font-medium
               uppercase
               tracking-wider
               text-slate-500
-              transition-colors
-              group-hover:border-blue-500/20
-              group-hover:text-blue-300
+
+              dark:border-white/10
+              dark:bg-white/5
+
+              sm:px-3
+              sm:text-[11px]
             "
           >
             {level}
@@ -235,9 +267,14 @@ export default function SkillCard({
             mt-5
             text-lg
             font-bold
+            text-slate-900
             transition-colors
             duration-300
-            group-hover:text-blue-400
+
+            dark:text-white
+
+            group-hover:text-blue-600
+            dark:group-hover:text-blue-400
           "
         >
           {name}
@@ -245,7 +282,16 @@ export default function SkillCard({
 
         {/* Description */}
 
-        <p className="mt-2 text-sm leading-6 text-slate-400">
+        <p
+          className="
+            mt-2
+            text-sm
+            leading-6
+            text-slate-600
+
+            dark:text-slate-400
+          "
+        >
           {description}
         </p>
 
