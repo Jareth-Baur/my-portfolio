@@ -1,4 +1,28 @@
-export const skillCategories = [
+export type SkillIcon =
+  | "nextjs"
+  | "react"
+  | "tailwind"
+  | "typescript"
+  | "python"
+  | "supabase"
+  | "mysql"
+  | "kotlin"
+  | "android"
+  | "java"
+  | "git"
+  | "github";
+
+export interface Skill {
+  name: string;
+  icon: SkillIcon;
+}
+
+export interface SkillCategory {
+  title: string;
+  skills: Skill[];
+}
+
+export const skillCategories: SkillCategory[] = [
   {
     title: "Frontend",
     skills: [

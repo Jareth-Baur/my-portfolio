@@ -32,11 +32,12 @@ const iconMap = {
   git: SiGit,
   github: SiGithub,
 };
-export type IconName = keyof typeof iconMap;
+
+import type { SkillIcon } from "@/data/skills";
 
 interface Props {
   name: string;
-  icon: keyof typeof iconMap;
+  icon: SkillIcon;
 }
 
 export default function SkillCard({ name, icon }: Props) {

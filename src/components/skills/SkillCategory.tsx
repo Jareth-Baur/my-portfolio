@@ -1,15 +1,10 @@
-import SkillCard, { IconName } from "./SkillCard";
-
-interface Skill {
-  name: string;
-  icon: IconName;
-}
+import SkillCard from "./SkillCard";
+import type { Skill } from "@/data/skills";
 
 interface Props {
   title: string;
   skills: Skill[];
 }
-
 export default function SkillCategory({
   title,
   skills,
