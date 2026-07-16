@@ -1,19 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Code2,
-  BrainCircuit,
-  Smartphone,
-  GraduationCap,
-} from "lucide-react";
+import { Code2, BrainCircuit, Smartphone, GraduationCap } from "lucide-react";
 
 const interests = [
   {
     icon: Code2,
     title: "Full Stack",
-    description:
-      "Building modern and responsive web applications.",
+    description: "Building modern and responsive web applications.",
   },
   {
     icon: BrainCircuit,
@@ -24,22 +18,17 @@ const interests = [
   {
     icon: Smartphone,
     title: "Mobile Development",
-    description:
-      "Creating practical and accessible mobile experiences.",
+    description: "Creating practical and accessible mobile experiences.",
   },
 ];
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="relative overflow-hidden py-32"
-    >
+    <section id="about" className="relative overflow-hidden py-32">
       {/* Background glow */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/10 blur-[150px]" />
 
       <div className="mx-auto max-w-7xl px-6">
-
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -58,7 +47,6 @@ export default function About() {
         </motion.div>
 
         <div className="grid items-center gap-16 lg:grid-cols-2">
-
           {/* LEFT */}
           <motion.div
             initial={{ opacity: 0, x: -70 }}
@@ -71,22 +59,21 @@ export default function About() {
           >
             <h3 className="text-3xl font-bold leading-tight">
               Turning ideas into
-              <span className="text-blue-400">
-                {" "}real-world solutions.
-              </span>
+              <span className="text-blue-400"> real-world solutions.</span>
             </h3>
 
-            <p className="mt-6 leading-8 text-slate-400">
-              I'm an Information Technology student passionate about
-              building software that combines modern development
-              technologies with practical problem-solving.
+            <p className="mt-6 leading-8 text-slate-600 dark:text-slate-400">
+              I'm an Information Technology graduate passionate about building
+              software that combines modern development technologies with
+              practical problem-solving.
             </p>
 
-            <p className="mt-5 leading-8 text-slate-400">
+            <p className="mt-5 leading-8 text-slate-600 dark:text-slate-400">
               My interests include full-stack development, artificial
-              intelligence, machine learning, and mobile development.
-              I enjoy turning ideas into functional applications and
-              continuously learning new technologies along the way.
+              intelligence, machine learning, and mobile development. I enjoy
+              turning ideas into functional applications and continuously
+              expanding my skills through hands-on projects and new
+              technologies.
             </p>
 
             {/* Education */}
@@ -102,9 +89,7 @@ export default function About() {
               </div>
 
               <div>
-                <p className="text-sm text-slate-500">
-                  Education
-                </p>
+                <p className="text-sm text-slate-500">Education</p>
 
                 <p className="font-semibold">
                   Bachelor of Science in Information Technology
@@ -157,9 +142,7 @@ export default function About() {
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-bold">
-                      {item.title}
-                    </h4>
+                    <h4 className="text-lg font-bold">{item.title}</h4>
 
                     <p className="mt-2 text-sm leading-6 text-slate-400">
                       {item.description}
@@ -169,7 +152,6 @@ export default function About() {
               );
             })}
           </motion.div>
-
         </div>
       </div>
     </section>
