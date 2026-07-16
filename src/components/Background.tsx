@@ -1,17 +1,25 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
+
+type Particle = {
+  left: number;
+  top: number;
+  duration: number;
+};
 
 export default function Background() {
-  const particles = useMemo(
-    () =>
-      Array.from({ length: 25 }).map(() => ({
-        left: Math.random() * 100,
-        top: Math.random() * 100,
-        duration: 5 + Math.random() * 8,
-      })),
-    []
-  );
+  const [particles, setParticles] = useState<Particle[]>([]);
+
+  useEffect(() => {
+    const generatedParticles = Array.from({ length: 25 }, () => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      duration: 5 + Math.random() * 8,
+    }));
+
+    setParticles(generatedParticles);
+  }, []);
 
   return (
     <div className="pointer-events-none fixed inset-0 -z-50 overflow-hidden">
@@ -41,16 +49,14 @@ export default function Background() {
 
       {/* Floating Particles */}
       <div className="absolute inset-0 opacity-20">
-        {particles.map((particle, i) => (
+        {particles.map((particle, index) => (
           <div
-            key={i}
-            className={`absolute h-1 w-1 rounded-full bg-cyan-400 ${
-              i > 14 ? "hidden md:block" : ""
-            }`}
+            key={index}
+            className="absolute h-1 w-1 rounded-full bg-cyan-400"
             style={{
               left: `${particle.left}%`,
               top: `${particle.top}%`,
-              animation: `float ${particle.duration}s infinite`,
+              animation: `float ${particle.duration}s ease infinite`,
             }}
           />
         ))}
