@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  motion,
-  Variants,
-} from "framer-motion";
+import { motion } from "framer-motion";
 
 import SkillCard from "./SkillCard";
 
@@ -16,17 +13,6 @@ interface Props {
   index: number;
 }
 
-const containerVariants: Variants = {
-  hidden: {},
-
-  visible: {
-    transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.1,
-    },
-  },
-};
-
 export default function SkillCategory({
   title,
   description,
@@ -38,37 +24,30 @@ export default function SkillCategory({
   ).padStart(2, "0");
 
   return (
-    <motion.section
-      initial="hidden"
-      whileInView="visible"
-      viewport={{
-        once: false,
-        amount: 0.05,
-        margin: "0px 0px -50px 0px",
-      }}
-      variants={containerVariants}
-    >
+    <section className="w-full min-w-0">
+
       {/* Category Header */}
 
       <motion.div
-        variants={{
-          hidden: {
-            opacity: 0,
-            y: 30,
-          },
-
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 0.6,
-              ease: [0.22, 1, 0.36, 1],
-            },
-          },
+        initial={{
+          y: 20,
+        }}
+        whileInView={{
+          y: 0,
+        }}
+        viewport={{
+          once: false,
+          amount: 0,
+        }}
+        transition={{
+          duration: 0.6,
+          ease: [0.22, 1, 0.36, 1],
         }}
         className="
           mb-8
           flex
+          w-full
+          min-w-0
           flex-col
           gap-4
           border-b
@@ -82,35 +61,37 @@ export default function SkillCategory({
           sm:justify-between
         "
       >
-        <div>
-          <div className="flex items-center gap-3">
+        <div className="min-w-0">
 
-            {/* Number */}
+          {/* Number + Title */}
+
+          <div className="flex min-w-0 items-center gap-2 sm:gap-3">
 
             <span
               className="
                 shrink-0
                 font-mono
-                text-sm
+                text-xs
                 text-blue-600
 
                 dark:text-blue-400
+
+                sm:text-sm
               "
             >
               {categoryNumber}
             </span>
 
-            {/* Line */}
-
             <motion.div
               initial={{
-                width: 0,
+                width: 16,
               }}
               whileInView={{
                 width: 32,
               }}
               viewport={{
                 once: false,
+                amount: 0,
               }}
               transition={{
                 duration: 0.6,
@@ -124,11 +105,10 @@ export default function SkillCategory({
               "
             />
 
-            {/* Title */}
-
             <h2
               className="
                 min-w-0
+                break-words
                 text-xl
                 font-bold
                 leading-tight
@@ -136,7 +116,8 @@ export default function SkillCategory({
 
                 dark:text-white
 
-                sm:text-3xl
+                sm:text-2xl
+                md:text-3xl
               "
             >
               {title}
@@ -150,6 +131,7 @@ export default function SkillCategory({
             className="
               mt-3
               max-w-2xl
+              break-words
               text-sm
               leading-6
               text-slate-600
@@ -161,6 +143,7 @@ export default function SkillCategory({
           >
             {description}
           </p>
+
         </div>
 
         {/* Technology Count */}
@@ -168,10 +151,10 @@ export default function SkillCategory({
         <span
           className="
             shrink-0
-            text-sm
+            text-xs
             text-slate-500
 
-            dark:text-slate-500
+            sm:text-sm
           "
         >
           {skills.length}{" "}
@@ -179,6 +162,7 @@ export default function SkillCategory({
             ? "Technology"
             : "Technologies"}
         </span>
+
       </motion.div>
 
       {/* Skills Grid */}
@@ -187,15 +171,16 @@ export default function SkillCategory({
         className="
           grid
           w-full
+          min-w-0
           grid-cols-1
           gap-4
 
-          min-[480px]:grid-cols-2
+          sm:grid-cols-2
+          sm:gap-5
 
           lg:grid-cols-3
 
           xl:grid-cols-4
-          xl:gap-5
         "
       >
         {skills.map((skill) => (
@@ -205,6 +190,7 @@ export default function SkillCategory({
           />
         ))}
       </div>
-    </motion.section>
+
+    </section>
   );
 }

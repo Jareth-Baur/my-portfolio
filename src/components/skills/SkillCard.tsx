@@ -4,7 +4,6 @@ import {
   motion,
   useMotionTemplate,
   useMotionValue,
-  Variants,
 } from "framer-motion";
 
 import {
@@ -41,25 +40,6 @@ const iconMap = {
   java: FaJava,
   git: SiGit,
   github: SiGithub,
-};
-
-const cardVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-    scale: 0.97,
-  },
-
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-
-    transition: {
-      duration: 0.5,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  },
 };
 
 interface Props {
@@ -105,7 +85,22 @@ export default function SkillCard({
 
   return (
     <motion.div
-      variants={cardVariants}
+      initial={{
+        y: 20,
+        scale: 0.98,
+      }}
+      whileInView={{
+        y: 0,
+        scale: 1,
+      }}
+      viewport={{
+        once: false,
+        amount: 0,
+      }}
+      transition={{
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      }}
       whileHover={{
         y: -6,
       }}
@@ -114,6 +109,7 @@ export default function SkillCard({
         group
         relative
         h-full
+        w-full
         min-w-0
         overflow-hidden
         rounded-2xl
@@ -136,7 +132,7 @@ export default function SkillCard({
         sm:p-6
       "
     >
-      {/* Mouse Glow */}
+      {/* Desktop Mouse Glow */}
 
       <motion.div
         style={{
@@ -151,9 +147,8 @@ export default function SkillCard({
           transition-opacity
           duration-500
 
-          group-hover:opacity-100
-
           md:block
+          md:group-hover:opacity-100
         "
       />
 
@@ -161,6 +156,7 @@ export default function SkillCard({
 
       <div
         className="
+          pointer-events-none
           absolute
           left-1/2
           top-0
@@ -178,11 +174,13 @@ export default function SkillCard({
         "
       />
 
-      <div className="relative z-10">
+      <div className="relative z-10 min-w-0">
 
         {/* Icon + Level */}
 
-        <div className="flex items-start justify-between gap-3">
+        <div className="flex min-w-0 items-start justify-between gap-3">
+
+          {/* Icon */}
 
           <motion.div
             whileHover={{
@@ -235,14 +233,16 @@ export default function SkillCard({
 
           <span
             className="
+              max-w-[120px]
               shrink-0
+              truncate
               rounded-full
               border
               border-slate-200
               bg-slate-100
               px-2.5
               py-1
-              text-[10px]
+              text-[9px]
               font-medium
               uppercase
               tracking-wider
@@ -265,6 +265,7 @@ export default function SkillCard({
         <h3
           className="
             mt-5
+            break-words
             text-lg
             font-bold
             text-slate-900
@@ -285,6 +286,7 @@ export default function SkillCard({
         <p
           className="
             mt-2
+            break-words
             text-sm
             leading-6
             text-slate-600
