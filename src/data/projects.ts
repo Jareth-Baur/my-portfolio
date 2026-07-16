@@ -4,6 +4,8 @@ export const projects = [
 
     title: "CropEye",
 
+    type: "desktop",
+
     tagline: "AI-powered Crop Disease Detection",
 
     description:
@@ -51,6 +53,8 @@ export const projects = [
 
     title: "TalkTiles",
 
+    type: "mobile",
+
     tagline: "Assistive Communication Mobile Application",
 
     description:
@@ -66,7 +70,7 @@ export const projects = [
 
     demo: "",
 
-    cover: "/projects/talktiles/talktiles.png",
+    cover: "/projects/talktiles/talktiles-cover.png",
 
     gallery: [
       "/projects/talktiles/talktiles1.png",
@@ -96,6 +100,8 @@ export const projects = [
     slug: "queue-management",
 
     title: "Queue Management System",
+
+    type: "desktop",
 
     tagline: "Smart Customer Queue Management",
 
