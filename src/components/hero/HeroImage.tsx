@@ -6,6 +6,20 @@ import Image from "next/image";
 
 import FloatingBadge from "./FloatingBadge";
 
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiFastapi,
+  SiPython,
+  SiMysql,
+  SiGit,
+  SiGithub,
+  SiLaravel,
+} from "react-icons/si";
+
+import { FaJava } from "react-icons/fa6";
+
 export default function HeroImage() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -21,7 +35,6 @@ export default function HeroImage() {
   });
 
   useEffect(() => {
-    // Skip mouse tracking on touch devices
     if ("ontouchstart" in window) return;
 
     const move = (e: MouseEvent) => {
@@ -37,12 +50,110 @@ export default function HeroImage() {
   return (
     <div className="relative flex w-full items-center justify-center">
       {/* Floating Tech Badges */}
-      <FloatingBadge title="Next.js" className="-left-10 top-10" />
-      <FloatingBadge title="Python" className="-right-6 top-0" />
-      <FloatingBadge title="YOLOv8" className="-left-8 bottom-12" />
-      <FloatingBadge title="Kotlin" className="-right-8 bottom-20" />
-      <FloatingBadge title="TypeScript" className="left-24 -bottom-10" />
+      <div className="pointer-events-none absolute inset-0">
+        {/* Outer Orbit */}
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: 35,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          className="absolute inset-0"
+        >
+          {/* Top */}
+          <FloatingBadge
+            icon={<SiNextdotjs />}
+            title="Next.js"
+            className="left-1/2 -top-8 -translate-x-1/2"
+            reverseDuration={35}
+            reverseDirection={-1}
+          />
 
+          {/* Top Right */}
+          <FloatingBadge
+            icon={<SiLaravel />}
+            title="Laravel"
+            className="right-10 top-6"
+            reverseDuration={35}
+            reverseDirection={-1}
+          />
+
+          {/* Right Upper */}
+          <FloatingBadge
+            icon={<SiTypescript />}
+            title="TypeScript"
+            className="right-0 top-1/4"
+            reverseDuration={35}
+            reverseDirection={-1}
+          />
+
+          {/* Right */}
+          <FloatingBadge
+            icon={<SiReact />}
+            title="React"
+            className="right-0 top-1/2 -translate-y-1/2"
+            reverseDuration={35}
+            reverseDirection={-1}
+          />
+
+          {/* Bottom Right */}
+          <FloatingBadge
+            icon={<SiPython />}
+            title="Python"
+            className="right-10 bottom-6"
+            reverseDuration={35}
+            reverseDirection={-1}
+          />
+
+          {/* Bottom */}
+          <FloatingBadge
+            icon={<SiFastapi />}
+            title="FastAPI"
+            className="left-1/2 -translate-x-1/2 -bottom-8"
+            reverseDuration={35}
+            reverseDirection={-1}
+          />
+
+          {/* Bottom Left */}
+          <FloatingBadge
+            icon={<FaJava />}
+            title="Java"
+            className="left-10 bottom-6"
+            reverseDuration={35}
+            reverseDirection={-1}
+          />
+
+          {/* Left */}
+          <FloatingBadge
+            icon={<SiGit />}
+            title="Git"
+            className="left-0 top-1/2 -translate-y-1/2"
+            reverseDuration={35}
+            reverseDirection={-1}
+          />
+
+          {/* Left Upper */}
+          <FloatingBadge
+            icon={<SiMysql />}
+            title="MySQL"
+            className="left-0 top-1/4"
+            reverseDuration={35}
+            reverseDirection={-1}
+          />
+
+          {/* Upper Left */}
+          <FloatingBadge
+            icon={<SiGithub />}
+            title="GitHub"
+            className="left-10 top-6"
+            reverseDuration={35}
+            reverseDirection={-1}
+          />
+        </motion.div>
+      </div>
+
+      {/* Profile */}
       <motion.div
         style={{
           rotateX,
@@ -73,13 +184,13 @@ export default function HeroImage() {
         />
 
         <motion.div
-          animate={{ rotate: -360 }}
+          animate={{ rotate: 360 }}
           transition={{
             duration: 20,
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute inset-4 sm:inset-5 rounded-full border border-cyan-400/20"
+          className="absolute inset-4 rounded-full border border-cyan-400/20 sm:inset-5"
         />
 
         <motion.div
@@ -91,7 +202,7 @@ export default function HeroImage() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute inset-8 sm:inset-10 rounded-full border border-white/10"
+          className="absolute inset-8 rounded-full border border-white/10 sm:inset-10"
         />
 
         {/* Profile Image */}

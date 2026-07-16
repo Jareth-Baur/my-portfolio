@@ -2,28 +2,68 @@
 
 import { motion } from "framer-motion";
 
-interface Props {
+interface FloatingBadgeProps {
+  icon: React.ReactNode;
   title: string;
-  className: string;
+  className?: string;
+  reverseDuration?: number;
+  reverseDirection?: 1 | -1;
 }
 
 export default function FloatingBadge({
+  icon,
   title,
-  className,
-}: Props) {
+  className = "",
+  reverseDuration = 35,
+  reverseDirection = -1,
+}: FloatingBadgeProps) {
   return (
     <motion.div
+      whileHover={{
+        scale: 1.12,
+        y: -4,
+      }}
       animate={{
-        y: [0, -10, 0],
+        scale: [1, 1.03, 1],
+        rotate: reverseDirection * 360,
       }}
       transition={{
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut",
+        rotate: {
+          duration: reverseDuration,
+          repeat: Infinity,
+          ease: "linear",
+        },
+        scale: {
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut",
+        },
       }}
-      className={`absolute hidden rounded-full border border-white/10 bg-slate-900/70 px-4 py-2 text-sm font-medium whitespace-nowrap text-white shadow-lg backdrop-blur-xl lg:flex ${className}`}
+      className={`
+        absolute
+        flex
+        items-center
+        gap-2
+        rounded-full
+        border
+        border-white/10
+        bg-slate-900/70
+        px-4
+        py-2
+        backdrop-blur-xl
+        shadow-lg
+        transition-all
+        duration-300
+        hover:border-blue-400
+        hover:shadow-[0_0_30px_rgba(59,130,246,0.4)]
+        ${className}
+      `}
     >
-      {title}
+      <span className="text-lg text-blue-400">{icon}</span>
+
+      <span className="whitespace-nowrap text-sm font-medium">
+        {title}
+      </span>
     </motion.div>
   );
 }
