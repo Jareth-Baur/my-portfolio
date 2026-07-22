@@ -129,24 +129,52 @@ npm start
 
 ## 📁 Public Assets
 
-All static assets such as:
+Static assets used throughout the portfolio are organized inside the `public/` directory.
 
-- Images
-- Icons
-- Project screenshots
-- Logos
-
-are stored inside the **public/** directory.
-
-Example:
-
-```
+```text
 public/
+├── gifs/
+│   └── cat-kiss.gif
+│
 ├── projects/
-├── gallery/
-├── images/
-└── icons/
+│   ├── cropeye/
+│   │   ├── cropeye.png
+│   │   ├── cropeye1.png
+│   │   ├── cropeye2.png
+│   │   ├── cropeye3.png
+│   │   └── cropeye4.png
+│   │
+│   ├── qms/
+│   │   ├── qms.png
+│   │   ├── qms1.png
+│   │   ├── qms2.png
+│   │   ├── qms3.png
+│   │   ├── qms4.png
+│   │   └── qms5.png
+│   │
+│   └── talktiles/
+│       ├── talktiles-cover.png
+│       ├── talktiles1.png
+│       ├── talktiles2.png
+│       ├── talktiles3.png
+│       └── talktiles4.png
+│
+├── file.svg
+├── globe.svg
+├── next.jpg
+├── next.svg
+├── resume.pdf
+├── vercel.svg
+└── window.svg
 ```
+
+The `public/` folder contains:
+
+- 📸 Project screenshots and covers
+- 🎞️ GIF animations
+- 📄 Resume (PDF)
+- 🖼️ SVG icons and assets
+- 🌐 Static images used across the portfolio
 
 ---
 
