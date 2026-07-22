@@ -29,47 +29,34 @@ A modern, responsive personal portfolio website built with **Next.js** and **Typ
 ## 📂 Project Structure
 
 ```text
-.
-├── public/
+src/
+├── app/                    # Next.js App Router pages
+│   ├── projects/
+│   │   └── [slug]/         # Dynamic project detail pages
+│   │       └── page.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── not-found.tsx
+│   └── page.tsx
 │
-├── src/
-│   ├── app/
-│   │   ├── projects/
-│   │   │   └── [slug]/
-│   │   │       └── page.tsx
-│   │   ├── globals.css
-│   │   ├── layout.tsx
-│   │   ├── not-found.tsx
-│   │   └── page.tsx
-│   │
-│   ├── components/
-│   │   ├── about/
-│   │   ├── animations/
-│   │   ├── contact/
-│   │   ├── cta/
-│   │   ├── hero/
-│   │   ├── layout/
-│   │   ├── project/
-│   │   ├── projects/
-│   │   ├── providers/
-│   │   ├── skills/
-│   │   ├── timeline/
-│   │   ├── ui/
-│   │   ├── Background.tsx
-│   │   └── MouseGlow.tsx
-│   │
-│   └── data/
-│       ├── projects.ts
-│       ├── skills.ts
-│       └── timeline.ts
+├── components/
+│   ├── about/              # About section
+│   ├── animations/         # Reusable animations
+│   ├── contact/            # Contact section
+│   ├── cta/                # Call-to-action components
+│   ├── hero/               # Hero section
+│   ├── layout/             # Navbar and footer
+│   ├── project/            # Project detail components
+│   ├── projects/           # Project listing components
+│   ├── providers/          # React context providers
+│   ├── skills/             # Skills section
+│   ├── timeline/           # Experience and education timeline
+│   └── ui/                 # Shared UI components
 │
-├── .gitignore
-├── eslint.config.mjs
-├── next.config.ts
-├── package.json
-├── postcss.config.mjs
-├── README.md
-└── tsconfig.json
+└── data/
+    ├── projects.ts         # Project data
+    ├── skills.ts           # Skills data
+    └── timeline.ts         # Timeline data
 ```
 
 ````
@@ -133,49 +120,13 @@ Static assets used throughout the portfolio are organized inside the `public/` d
 
 ```text
 public/
-├── gifs/
-│   └── cat-kiss.gif
-│
+├── gifs/               # GIF animations
 ├── projects/
-│   ├── cropeye/
-│   │   ├── cropeye.png
-│   │   ├── cropeye1.png
-│   │   ├── cropeye2.png
-│   │   ├── cropeye3.png
-│   │   └── cropeye4.png
-│   │
-│   ├── qms/
-│   │   ├── qms.png
-│   │   ├── qms1.png
-│   │   ├── qms2.png
-│   │   ├── qms3.png
-│   │   ├── qms4.png
-│   │   └── qms5.png
-│   │
-│   └── talktiles/
-│       ├── talktiles-cover.png
-│       ├── talktiles1.png
-│       ├── talktiles2.png
-│       ├── talktiles3.png
-│       └── talktiles4.png
-│
-├── file.svg
-├── globe.svg
-├── next.jpg
-├── next.svg
-├── resume.pdf
-├── vercel.svg
-└── window.svg
-```
-
-The `public/` folder contains:
-
-- 📸 Project screenshots and covers
-- 🎞️ GIF animations
-- 📄 Resume (PDF)
-- 🖼️ SVG icons and assets
-- 🌐 Static images used across the portfolio
-
+│   ├── cropeye/        # CropEye project assets
+│   ├── qms/            # Queue Management System assets
+│   └── talktiles/      # TalkTiles project assets
+├── resume.pdf          # Downloadable resume
+└── *.svg               # Static icons and graphics
 ---
 
 ## 🎯 Portfolio Sections
