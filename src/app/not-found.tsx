@@ -24,18 +24,16 @@ export default function NotFound() {
           />
         </div>
 
-        <p className="text-7xl font-black tracking-tight text-blue-400">
-          404
-        </p>
+        <p className="text-7xl font-black tracking-tight text-blue-400">404</p>
 
         <h1 className="mt-4 text-4xl font-bold">
           Oops... this page isn't ready yet!
         </h1>
 
         <p className="mt-6 text-lg leading-8 text-slate-400">
-          You somehow found a page that's still under construction.
-          I'm currently building something awesome here, so feel free
-          to come back later and see what's new.
+          You somehow found a page that's still under construction. I'm
+          currently building something awesome here, so feel free to come back
+          later and see what's new.
         </p>
 
         <div className="mt-10 inline-flex items-center gap-2 rounded-full border border-yellow-400/20 bg-yellow-400/10 px-5 py-3 text-yellow-300">

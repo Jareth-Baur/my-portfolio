@@ -28,24 +28,51 @@ A modern, responsive personal portfolio website built with **Next.js** and **Typ
 
 ## 📂 Project Structure
 
+```text
+.
+├── public/
+│
+├── src/
+│   ├── app/
+│   │   ├── projects/
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── not-found.tsx
+│   │   └── page.tsx
+│   │
+│   ├── components/
+│   │   ├── about/
+│   │   ├── animations/
+│   │   ├── contact/
+│   │   ├── cta/
+│   │   ├── hero/
+│   │   ├── layout/
+│   │   ├── project/
+│   │   ├── projects/
+│   │   ├── providers/
+│   │   ├── skills/
+│   │   ├── timeline/
+│   │   ├── ui/
+│   │   ├── Background.tsx
+│   │   └── MouseGlow.tsx
+│   │
+│   └── data/
+│       ├── projects.ts
+│       ├── skills.ts
+│       └── timeline.ts
+│
+├── .gitignore
+├── eslint.config.mjs
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+├── README.md
+└── tsconfig.json
 ```
-src/
-│
-├── app/
-│   ├── project/
-│   └── projects/
-│
-├── components/
-│   ├── hero/
-│   ├── home/
-│   ├── layout/
-│   ├── project/
-│   └── ui/
-│
-├── data/
-│
-public/
-```
+
+````
 
 ---
 
@@ -55,7 +82,7 @@ public/
 
 ```bash
 git clone https://github.com/Jareth-Baur/my-portfolio.git
-```
+````
 
 ### Navigate to the project
 
@@ -126,11 +153,10 @@ public/
 ## 🎯 Portfolio Sections
 
 - Home
-- About Me
+- About
+- Projects
 - Skills
-- Featured Projects
-- Project Details
-- Gallery
+- Journey
 - Contact
 
 ---
