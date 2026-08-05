@@ -1,8 +1,8 @@
-# 💼 My Portfolio
+#  My Portfolio
 
 A modern, responsive personal portfolio website built with **Next.js** and **TypeScript** to showcase my projects, skills, and experience as an Information Technology graduate and aspiring software developer.
 
-## ✨ Features
+##  Features
 
 - 🎨 Modern and responsive UI
 - ⚡ Built with Next.js App Router
@@ -15,7 +15,7 @@ A modern, responsive personal portfolio website built with **Next.js** and **Typ
 
 ---
 
-## 🛠️ Built With
+##  Built With
 
 - Next.js
 - React
@@ -26,7 +26,7 @@ A modern, responsive personal portfolio website built with **Next.js** and **Typ
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 src/
@@ -111,7 +111,7 @@ npm start
 
 ---
 
-## 📁 Public Assets
+##  Public Assets
 
 Static assets used throughout the portfolio are organized inside the `public/` directory.
 
@@ -128,7 +128,7 @@ public/
 
 ---
 
-## 🎯 Portfolio Sections
+##  Portfolio Sections
 
 - Home
 - About
@@ -139,13 +139,13 @@ public/
 
 ---
 
-## 📄 License
+##  License
 
 This project is open source and available under the MIT License.
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Jareth Baur**
 
