@@ -122,12 +122,16 @@ export default function ProjectCard({
         overflow-hidden
         rounded-3xl
         border
-        border-white/10
-        bg-slate-900/60
+        border-slate-200
+        bg-white/70
+        shadow-sm
         backdrop-blur-xl
         transition-colors
         duration-500
         hover:border-blue-500/40
+        dark:border-white/10
+        dark:bg-slate-900/60
+        dark:shadow-none
       "
     >
       {/* Mouse Spotlight */}
@@ -199,7 +203,7 @@ export default function ProjectCard({
 
         {/* Dark gradient */}
 
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent dark:from-slate-950" />
 
         {/* Blue overlay */}
 
@@ -238,7 +242,7 @@ export default function ProjectCard({
             z-10
             rounded-full
             border
-            border-white/10
+            border-white/20
             bg-slate-950/60
             px-3
             py-1.5
@@ -332,7 +336,7 @@ export default function ProjectCard({
 
         <motion.p
           variants={contentVariants}
-          className="mt-3 text-sm leading-6 text-slate-400 sm:text-base"
+          className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400 sm:text-base"
         >
           {project.description}
         </motion.p>
@@ -382,7 +386,7 @@ export default function ProjectCard({
 
         <motion.div
           variants={contentVariants}
-          className="my-6 h-px w-full bg-gradient-to-r from-white/10 via-white/5 to-transparent sm:my-8"
+          className="my-6 h-px w-full bg-gradient-to-r from-slate-200 via-slate-100 to-transparent dark:from-white/10 dark:via-white/5 sm:my-8"
         />
 
         {/* Actions */}
@@ -414,13 +418,14 @@ export default function ProjectCard({
                 gap-2
                 rounded-xl
                 border
-                border-white/10
+                border-slate-200
                 px-4
                 py-3
                 transition
                 duration-300
                 hover:border-blue-500/50
                 hover:bg-blue-500/5
+                dark:border-white/10
                 focus:outline-none
                 focus:ring-2
                 focus:ring-blue-400

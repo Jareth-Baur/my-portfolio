@@ -109,8 +109,9 @@ export default function TimelineItem({
           rounded-full
           border
           border-blue-400/50
-          bg-slate-950
+          bg-white
           shadow-[0_0_20px_rgba(59,130,246,0.4)]
+          dark:bg-slate-950
           md:left-1/2
           md:-translate-x-1/2
         "
@@ -141,14 +142,18 @@ export default function TimelineItem({
           overflow-hidden
           rounded-3xl
           border
-          border-white/10
-          bg-slate-900/50
+          border-slate-200
+          bg-white/70
+          shadow-sm
           p-6
           backdrop-blur-xl
           transition-colors
           duration-500
           hover:border-blue-500/40
           hover:shadow-[0_0_40px_rgba(59,130,246,0.12)]
+          dark:border-white/10
+          dark:bg-slate-900/50
+          dark:shadow-none
           sm:p-8
 
           ${
@@ -241,7 +246,7 @@ export default function TimelineItem({
 
           {/* Description */}
 
-          <p className="mt-3 leading-7 text-slate-400">
+          <p className="mt-3 leading-7 text-slate-600 dark:text-slate-400">
             {description}
           </p>
 

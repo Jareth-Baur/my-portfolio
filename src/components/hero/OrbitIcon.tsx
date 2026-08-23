@@ -6,7 +6,7 @@ import {
   useTransform,
   animate,
 } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 
 interface OrbitIconProps {
   children: React.ReactNode;
@@ -27,6 +27,13 @@ export default function OrbitIcon({
   tilt = 0,
   size = 52,
 }: OrbitIconProps) {
+  // Keep the server and hydration render static. Framer Motion can otherwise
+  // advance the motion values before React has finished hydrating the page.
+  const isMounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
   const progress = useMotionValue(angle);
 
   useEffect(() => {
@@ -91,6 +98,63 @@ export default function OrbitIcon({
     return 0.55 + ((depth + 1) / 2) * 0.45;
   });
 
+  const radians = (angle * Math.PI) / 180;
+  const tiltRadians = (tilt * Math.PI) / 180;
+  const baseX = Math.cos(radians) * radiusX;
+  const baseY = Math.sin(radians) * radiusY;
+  const initialX =
+    baseX * Math.cos(tiltRadians) -
+    baseY * Math.sin(tiltRadians);
+  const initialY =
+    baseX * Math.sin(tiltRadians) +
+    baseY * Math.cos(tiltRadians);
+  const depth = Math.sin(radians);
+  const initialScale = 0.85 + ((depth + 1) / 2) * 0.3;
+  const initialOpacity = 0.55 + ((depth + 1) / 2) * 0.45;
+  const initialZIndex = depth > 0 ? 30 : 5;
+
+  const icon = (
+    <div
+      className="
+        flex
+        h-full
+        w-full
+        items-center
+        justify-center
+        rounded-full
+        border
+        border-slate-200
+        bg-white/90
+        text-2xl
+        shadow-[0_0_25px_rgba(59,130,246,0.2)]
+        backdrop-blur-xl
+        dark:border-white/10
+        dark:bg-slate-950/90
+      "
+    >
+      {children}
+    </div>
+  );
+
+  if (!isMounted) {
+    return (
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/2"
+        style={{
+          width: size,
+          height: size,
+          marginLeft: -size / 2,
+          marginTop: -size / 2,
+          opacity: initialOpacity,
+          zIndex: initialZIndex,
+          transform: `translate(${initialX}px, ${initialY}px) scale(${initialScale})`,
+        }}
+      >
+        {icon}
+      </div>
+    );
+  }
+
   return (
     <motion.div
       className="pointer-events-none absolute left-1/2 top-1/2"
@@ -106,24 +170,7 @@ export default function OrbitIcon({
         marginTop: -size / 2,
       }}
     >
-      <div
-        className="
-          flex
-          h-full
-          w-full
-          items-center
-          justify-center
-          rounded-full
-          border
-          border-white/10
-          bg-slate-950/90
-          text-2xl
-          shadow-[0_0_25px_rgba(59,130,246,0.2)]
-          backdrop-blur-xl
-        "
-      >
-        {children}
-      </div>
+      {icon}
     </motion.div>
   );
 }

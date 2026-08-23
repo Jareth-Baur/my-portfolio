@@ -6,7 +6,7 @@ export default function CTA() {
           Interested in Working Together?
         </h2>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600 dark:text-slate-300">
           I'm actively looking for opportunities in software engineering, AI,
           and full-stack development.
         </p>

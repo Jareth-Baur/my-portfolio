@@ -135,14 +135,18 @@ function StatCard({
         overflow-hidden
         rounded-3xl
         border
-        border-white/10
-        bg-slate-900/50
+        border-slate-200
+        bg-white/70
+        shadow-sm
         p-5
         backdrop-blur-xl
         transition-colors
         duration-500
         hover:border-blue-500/40
         hover:shadow-[0_0_40px_rgba(59,130,246,0.12)]
+        dark:border-white/10
+        dark:bg-slate-900/50
+        dark:shadow-none
         sm:p-6
       "
     >

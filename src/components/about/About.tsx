@@ -82,7 +82,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ delay: 0.2 }}
-              className="mt-8 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur"
+              className="mt-8 flex items-center gap-4 rounded-2xl border border-slate-200 bg-white/70 p-5 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5 dark:shadow-none"
             >
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400">
                 <GraduationCap />
@@ -135,7 +135,7 @@ export default function About() {
                     x: 10,
                     scale: 1.02,
                   }}
-                  className="group flex items-start gap-5 rounded-2xl border border-white/10 bg-slate-900/50 p-6 backdrop-blur-xl transition-colors hover:border-blue-500/50"
+                  className="group flex items-start gap-5 rounded-2xl border border-slate-200 bg-white/70 p-6 shadow-sm backdrop-blur-xl transition-colors hover:border-blue-500/50 dark:border-white/10 dark:bg-slate-900/50 dark:shadow-none"
                 >
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400 transition group-hover:bg-blue-500 group-hover:text-white">
                     <Icon size={23} />
@@ -144,7 +144,7 @@ export default function About() {
                   <div>
                     <h4 className="text-lg font-bold">{item.title}</h4>
 
-                    <p className="mt-2 text-sm leading-6 text-slate-400">
+                    <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
                       {item.description}
                     </p>
                   </div>

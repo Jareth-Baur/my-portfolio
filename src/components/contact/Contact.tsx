@@ -118,11 +118,16 @@ export default function Contact() {
             border
             border-blue-500/20
             bg-gradient-to-br
-            from-blue-500/10
-            via-slate-900/50
-            to-cyan-500/5
+            from-blue-500/15
+            via-white/85
+            to-cyan-500/10
             p-6
+            shadow-sm
             sm:p-8
+            dark:from-blue-500/10
+            dark:via-slate-900/50
+            dark:to-cyan-500/5
+            dark:shadow-none
           "
         >
           <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-blue-500/10 blur-[80px]" />
@@ -154,7 +159,7 @@ export default function Contact() {
                 Have a project or opportunity in mind?
               </h3>
 
-              <p className="mt-3 max-w-2xl leading-7 text-slate-400">
+              <p className="mt-3 max-w-2xl leading-7 text-slate-600 dark:text-slate-400">
                 Feel free to reach out. I'm always interested in discussing
                 new projects, development opportunities, and ideas where I
                 can contribute and continue growing as a developer.
@@ -281,7 +286,7 @@ export default function Contact() {
                 GitHub Activity
               </h2>
 
-              <p className="mt-3 max-w-2xl leading-7 text-slate-400">
+              <p className="mt-3 max-w-2xl leading-7 text-slate-600 dark:text-slate-400">
                 A snapshot of my public development activity, repositories,
                 and technologies across GitHub.
               </p>
@@ -301,9 +306,10 @@ export default function Contact() {
                 gap-2
                 text-sm
                 font-medium
-                text-slate-400
+                text-slate-600
                 transition-colors
                 hover:text-blue-400
+                dark:text-slate-400
               "
             >
               View GitHub Profile

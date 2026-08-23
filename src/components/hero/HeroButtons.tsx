@@ -12,7 +12,7 @@ export default function HeroButtons() {
         href="/resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 py-4 font-semibold backdrop-blur transition-all duration-300 hover:scale-105 hover:border-blue-400 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400 sm:w-auto"
+        className="flex items-center justify-center rounded-xl border border-slate-200 bg-white/70 px-8 py-4 font-semibold shadow-sm backdrop-blur transition-all duration-300 hover:scale-105 hover:border-blue-400 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:bg-white/10 sm:w-auto"
       >
         Download Resume
       </a>

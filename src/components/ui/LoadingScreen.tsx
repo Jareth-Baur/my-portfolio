@@ -27,7 +27,7 @@ export default function LoadingScreen() {
           transition={{
             duration: 0.5,
           }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-950"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-50 dark:bg-slate-950"
         >
           <motion.div
             initial={{
