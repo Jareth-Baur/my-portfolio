@@ -68,7 +68,7 @@ export default function Hero() {
           scale: 1,
         }}
         viewport={{
-          once: false,
+          once: true,
           amount: 0.2,
         }}
         transition={{
@@ -105,7 +105,7 @@ export default function Hero() {
 
             lg:h-[700px]
             lg:w-[700px]
-            lg:blur-[180px]
+            lg:blur-[120px]
           "
         />
       </motion.div>
@@ -119,7 +119,7 @@ export default function Hero() {
           initial="hidden"
           whileInView="visible"
           viewport={{
-            once: false,
+            once: true,
             amount: 0.25,
           }}
           className="order-2 text-center lg:order-1 lg:text-left"
@@ -315,7 +315,7 @@ export default function Hero() {
           initial="hidden"
           whileInView="visible"
           viewport={{
-            once: false,
+            once: true,
             amount: 0.25,
           }}
           className="order-1 flex justify-center lg:order-2 lg:justify-end"
@@ -337,7 +337,7 @@ export default function Hero() {
           y: 0,
         }}
         viewport={{
-          once: false,
+          once: true,
           amount: 0.5,
         }}
         transition={{

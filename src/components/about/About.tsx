@@ -33,7 +33,7 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
@@ -51,7 +51,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: -70 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{
               duration: 0.7,
               ease: "easeOut",
@@ -80,7 +80,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               className="mt-8 flex items-center gap-4 rounded-2xl border border-slate-200 bg-white/70 p-5 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5 dark:shadow-none"
             >
@@ -102,7 +102,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: 70 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{
               duration: 0.7,
               ease: "easeOut",
@@ -124,7 +124,7 @@ export default function About() {
                     x: 0,
                   }}
                   viewport={{
-                    once: false,
+                    once: true,
                     amount: 0.5,
                   }}
                   transition={{

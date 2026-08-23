@@ -230,7 +230,7 @@ export default function ProjectCard({
             x: 0,
           }}
           viewport={{
-            once: false,
+            once: true,
           }}
           transition={{
             delay: 0.3,
@@ -363,7 +363,7 @@ export default function ProjectCard({
                   scale: 1,
                 }}
                 viewport={{
-                  once: false,
+                  once: true,
                 }}
                 transition={{
                   duration: 0.3,

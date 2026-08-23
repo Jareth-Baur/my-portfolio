@@ -75,7 +75,7 @@ export default function Contact() {
             y: 0,
           }}
           viewport={{
-            once: false,
+            once: true,
             amount: 0.4,
           }}
           transition={{
@@ -103,7 +103,7 @@ export default function Contact() {
             scale: 1,
           }}
           viewport={{
-            once: false,
+            once: true,
             amount: 0.4,
           }}
           transition={{
@@ -215,7 +215,7 @@ export default function Contact() {
           initial="hidden"
           whileInView="visible"
           viewport={{
-            once: false,
+            once: true,
             amount: 0.2,
           }}
           className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
@@ -265,7 +265,7 @@ export default function Contact() {
             y: 0,
           }}
           viewport={{
-            once: false,
+            once: true,
             amount: 0.1,
           }}
           transition={{

@@ -59,7 +59,7 @@ function MobileScreenshot({
         scale: 1,
       }}
       viewport={{
-        once: false,
+        once: true,
         amount: 0.2,
       }}
       transition={{
@@ -126,7 +126,7 @@ function DesktopScreenshot({
         y: 0,
       }}
       viewport={{
-        once: false,
+        once: true,
         amount: 0.2,
       }}
       transition={{

@@ -36,7 +36,7 @@ export default function SkillCategory({
           y: 0,
         }}
         viewport={{
-          once: false,
+          once: true,
           amount: 0,
         }}
         transition={{
@@ -90,7 +90,7 @@ export default function SkillCategory({
                 width: 32,
               }}
               viewport={{
-                once: false,
+                once: true,
                 amount: 0,
               }}
               transition={{

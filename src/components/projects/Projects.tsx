@@ -36,7 +36,7 @@ export default function Projects() {
           scale: 1,
         }}
         viewport={{
-          once: false,
+          once: true,
           amount: 0.2,
         }}
         transition={{
@@ -67,7 +67,7 @@ export default function Projects() {
             y: 0,
           }}
           viewport={{
-            once: false,
+            once: true,
             amount: 0.5,
           }}
           transition={{
@@ -88,7 +88,7 @@ export default function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{
-            once: false,
+            once: true,
             amount: 0.1,
           }}
           className="mt-10 grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-10"

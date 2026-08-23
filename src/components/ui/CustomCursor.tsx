@@ -28,7 +28,7 @@ export default function CustomCursor() {
       mouseY.set(event.clientY - 8);
     };
 
-    window.addEventListener("mousemove", move);
+    window.addEventListener("mousemove", move, { passive: true });
 
     return () => {
       window.removeEventListener("mousemove", move);
@@ -41,7 +41,7 @@ export default function CustomCursor() {
         x,
         y,
       }}
-      className="pointer-events-none fixed left-0 top-0 z-[9998] hidden h-4 w-4 rounded-full border border-blue-400 bg-blue-400/20 lg:block"
+      className="pointer-events-none fixed left-0 top-0 z-[9998] hidden h-4 w-4 rounded-full border border-blue-400 bg-blue-400/20 xl:block"
     />
   );
 }

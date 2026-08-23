@@ -82,7 +82,7 @@ export default function Skills() {
             y: 0,
           }}
           viewport={{
-            once: false,
+            once: true,
             amount: 0,
           }}
           transition={{
@@ -126,7 +126,7 @@ export default function Skills() {
                   y: 0,
                 }}
                 viewport={{
-                  once: false,
+                  once: true,
                   amount: 0,
                 }}
                 transition={{

@@ -18,7 +18,7 @@ export default function Reveal({
       initial="hidden"
       whileInView="visible"
       viewport={{
-        once: false,
+        once: true,
         amount: 0.2,
       }}
       variants={{

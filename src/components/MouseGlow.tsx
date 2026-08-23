@@ -23,7 +23,7 @@ export default function MouseGlow() {
       mouseY.set(e.clientY - 200);
     };
 
-    window.addEventListener("mousemove", move);
+    window.addEventListener("mousemove", move, { passive: true });
 
     return () => window.removeEventListener("mousemove", move);
   }, []);
@@ -34,7 +34,7 @@ export default function MouseGlow() {
         x,
         y,
       }}
-      className="pointer-events-none fixed h-[400px] w-[400px] rounded-full bg-blue-500/20 blur-3xl"
+      className="pointer-events-none fixed hidden h-[320px] w-[320px] rounded-full bg-blue-500/15 blur-3xl xl:block"
     />
   );
 }

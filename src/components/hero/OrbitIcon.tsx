@@ -98,21 +98,6 @@ export default function OrbitIcon({
     return 0.55 + ((depth + 1) / 2) * 0.45;
   });
 
-  const radians = (angle * Math.PI) / 180;
-  const tiltRadians = (tilt * Math.PI) / 180;
-  const baseX = Math.cos(radians) * radiusX;
-  const baseY = Math.sin(radians) * radiusY;
-  const initialX =
-    baseX * Math.cos(tiltRadians) -
-    baseY * Math.sin(tiltRadians);
-  const initialY =
-    baseX * Math.sin(tiltRadians) +
-    baseY * Math.cos(tiltRadians);
-  const depth = Math.sin(radians);
-  const initialScale = 0.85 + ((depth + 1) / 2) * 0.3;
-  const initialOpacity = 0.55 + ((depth + 1) / 2) * 0.45;
-  const initialZIndex = depth > 0 ? 30 : 5;
-
   const icon = (
     <div
       className="
@@ -137,22 +122,7 @@ export default function OrbitIcon({
   );
 
   if (!isMounted) {
-    return (
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/2"
-        style={{
-          width: size,
-          height: size,
-          marginLeft: -size / 2,
-          marginTop: -size / 2,
-          opacity: initialOpacity,
-          zIndex: initialZIndex,
-          transform: `translate(${initialX}px, ${initialY}px) scale(${initialScale})`,
-        }}
-      >
-        {icon}
-      </div>
-    );
+    return null;
   }
 
   return (

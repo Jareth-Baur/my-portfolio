@@ -55,7 +55,7 @@ export default function Timeline() {
             y: 0,
           }}
           viewport={{
-            once: false,
+            once: true,
             amount: 0.5,
           }}
           transition={{
@@ -83,7 +83,7 @@ export default function Timeline() {
               scaleY: 1,
             }}
             viewport={{
-              once: false,
+              once: true,
               amount: 0.1,
             }}
             transition={{

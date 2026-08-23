@@ -79,11 +79,13 @@ body {
 
   border-radius: 100%;
 
-  filter: blur(180px);
+  filter: blur(110px);
 
   opacity: 0.15;
 
   animation: float 16s ease-in-out infinite;
+  will-change: transform;
+  contain: paint;
 }
 
 .dark .blur-circle {
@@ -101,5 +103,17 @@ body {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+/* Avoid costly visual effects for visitors who request reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

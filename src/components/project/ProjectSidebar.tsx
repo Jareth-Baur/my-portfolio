@@ -41,7 +41,7 @@ export default function ProjectSidebar({ project }: Props) {
         x: 0,
       }}
       viewport={{
-        once: false,
+        once: true,
         amount: 0.2,
       }}
       transition={{

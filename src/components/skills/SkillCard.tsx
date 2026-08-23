@@ -94,7 +94,7 @@ export default function SkillCard({
         scale: 1,
       }}
       viewport={{
-        once: false,
+        once: true,
         amount: 0,
       }}
       transition={{

@@ -25,7 +25,7 @@ export default function ProjectSection({
         y: 0,
       }}
       viewport={{
-        once: false,
+        once: true,
         amount: 0.15,
       }}
       transition={{
@@ -43,7 +43,7 @@ export default function ProjectSection({
             scaleY: 1,
           }}
           viewport={{
-            once: false,
+            once: true,
           }}
           transition={{
             duration: 0.6,

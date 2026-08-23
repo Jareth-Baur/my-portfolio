@@ -49,7 +49,7 @@ export default function GitHubStats() {
       initial="hidden"
       whileInView="visible"
       viewport={{
-        once: false,
+        once: true,
         amount: 0.1,
       }}
       className="grid gap-6 lg:grid-cols-2"

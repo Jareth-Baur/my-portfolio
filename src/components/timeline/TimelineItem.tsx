@@ -64,7 +64,7 @@ export default function TimelineItem({
         y: 0,
       }}
       viewport={{
-        once: false,
+        once: true,
         amount: 0.25,
       }}
       transition={{
@@ -90,7 +90,7 @@ export default function TimelineItem({
           scale: 1,
         }}
         viewport={{
-          once: false,
+          once: true,
         }}
         transition={{
           duration: 0.4,
