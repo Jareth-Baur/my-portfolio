@@ -1,21 +1,21 @@
-# 💼 My Portfolio
+#  My Portfolio
 
-A modern, responsive personal portfolio website built with **Next.js** and **TypeScript** to showcase my projects, skills, and experience as an Information Technology student and aspiring software developer.
+A modern, responsive personal portfolio website built with **Next.js** and **TypeScript** to showcase my projects, skills, and experience as an Information Technology graduate and aspiring software developer.
 
-## ✨ Features
+##  Features
 
 - 🎨 Modern and responsive UI
 - ⚡ Built with Next.js App Router
 - 📱 Mobile-friendly design
-- 🌙 Dark-themed interface
-- 🖼️ Project showcase with image gallery
+- 🌓 Light and dark mode support
+- 🖼️ Project showcase with image galleries
 - 📝 Detailed project pages
 - 🚀 Optimized performance
 - 💻 Clean and modular component architecture
 
 ---
 
-## 🛠️ Built With
+##  Built With
 
 - Next.js
 - React
@@ -26,7 +26,7 @@ A modern, responsive personal portfolio website built with **Next.js** and **Typ
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 src/
@@ -59,8 +59,6 @@ src/
     └── timeline.ts         # Timeline data
 ```
 
-````
-
 ---
 
 ## 🚀 Getting Started
@@ -69,7 +67,7 @@ src/
 
 ```bash
 git clone https://github.com/Jareth-Baur/my-portfolio.git
-````
+```
 
 ### Navigate to the project
 
@@ -91,9 +89,8 @@ npm run dev
 
 Open your browser and visit:
 
-```
+```text
 http://localhost:3000
-
 ```
 
 ---
@@ -114,7 +111,7 @@ npm start
 
 ---
 
-## 📁 Public Assets
+##  Public Assets
 
 Static assets used throughout the portfolio are organized inside the `public/` directory.
 
@@ -127,9 +124,11 @@ public/
 │   └── talktiles/      # TalkTiles project assets
 ├── resume.pdf          # Downloadable resume
 └── *.svg               # Static icons and graphics
+```
+
 ---
 
-## 🎯 Portfolio Sections
+##  Portfolio Sections
 
 - Home
 - About
@@ -140,20 +139,20 @@ public/
 
 ---
 
-## 📄 License
+##  License
 
 This project is open source and available under the MIT License.
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Jareth Baur**
 
 Bachelor of Science in Information Technology
 
-GitHub: https://github.com/Jareth-Baur
+GitHub: `https://github.com/Jareth-Baur`
 
-Portfolio: https://jareth-baur.vercel.app/
+Portfolio: `https://jareth-baur.vercel.app/`
 
-Email: jareth.baur.dev@gmail.com
+Email: `jareth.baur.dev@gmail.com`
