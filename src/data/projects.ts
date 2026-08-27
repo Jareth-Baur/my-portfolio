@@ -143,4 +143,107 @@ export const projects = [
 
     featured: true,
   },
+
+  {
+    slug: "attendify",
+
+    title: "Attendify",
+
+    type: "desktop",
+
+    tagline: "QR-Based Attendance Management System for Educational Institutions",
+
+    description:
+      "Attendify is a web-based attendance management system designed for educational institutions. It enables teachers to manage students, generate QR codes, record attendance through QR scanning, review attendance records, and generate school attendance reports.",
+
+    problem:
+      "Manual attendance recording is time-consuming, prone to errors, and difficult to manage across multiple classes and school sections. Teachers also need an efficient way to track attendance records and generate required reports.",
+
+    solution:
+      "Attendify digitizes attendance management through QR-based student identification, teacher and student management, attendance sessions, real-time attendance recording, manual corrections, attendance dashboards, and automated report generation.",
+
+    github:
+      "https://github.com/Jareth-Baur/Attendify",
+
+    demo: "",
+
+    cover: "/projects/attendify/attendify.png",
+
+    gallery: [
+      "/projects/attendify/attendify1.png",
+      "/projects/attendify/attendify2.png",
+      "/projects/attendify/attendify3.png",
+      "/projects/attendify/attendify4.png",
+    ],
+
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Neon",
+      "Better Auth",
+      "Zod",
+      "Tailwind CSS",
+    ],
+
+    year: "2026",
+
+    status: "In Development",
+
+    role: "Full Stack Developer",
+
+    featured: true,
+  },
+
+  {
+    slug: "unikit",
+
+    title: "UniKit",
+
+    type: "desktop",
+
+    tagline: "All-in-One Utility Toolkit for Everyday Tasks",
+
+    description:
+      "UniKit is a web-based collection of practical utilities designed to simplify common digital tasks. It provides tools for image processing, text extraction, background removal, and other productivity-focused functions through a single modern interface.",
+
+    problem:
+      "Common digital tasks often require users to switch between multiple websites and applications, resulting in a fragmented and inefficient workflow.",
+
+    solution:
+      "UniKit brings multiple useful utilities together into a single web application, providing an accessible interface for performing everyday tasks such as image background removal and OCR-based text extraction.",
+
+    github:
+      "https://github.com/Jareth-Baur/UniKit",
+
+    demo: "",
+
+    cover: "/projects/unikit/unikit.png",
+
+    gallery: [
+      "/projects/unikit/unikit1.png",
+      "/projects/unikit/unikit2.png",
+      "/projects/unikit/unikit3.png",
+      "/projects/unikit/unikit4.png",
+    ],
+
+    technologies: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Python",
+      "FastAPI",
+      "EasyOCR",
+      "rembg",
+    ],
+
+    year: "2026",
+
+    status: "Completed",
+
+    role: "Full Stack Developer",
+
+    featured: true,
+  },
 ];

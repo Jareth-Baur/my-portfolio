@@ -23,7 +23,7 @@ export const timeline: TimelineItem[] = [
     year: "2024",
     title: "Queue Management System",
     description:
-      "Developed a desktop-based queue management application using Java and JavaFX, gaining hands-on experience in object-oriented programming and desktop application development.",
+      "Developed a desktop-based queue management application using Java and JavaFX, gaining hands-on experience in object-oriented programming, database integration, and desktop application development.",
     type: "project",
   },
 
@@ -31,7 +31,7 @@ export const timeline: TimelineItem[] = [
     year: "2025",
     title: "TalkTiles",
     description:
-      "Built an Android AAC mobile application designed to support communication through an accessible tile-based interface using Kotlin and modern Android development tools.",
+      "Built an Android AAC mobile application using Kotlin and Jetpack Compose, featuring a customizable tile-based communication interface, text-to-speech, and local data management.",
     type: "project",
   },
 
@@ -39,7 +39,23 @@ export const timeline: TimelineItem[] = [
     year: "2025 — 2026",
     title: "CropEye",
     description:
-      "Developed an AI-powered crop disease detection platform as a capstone project, combining drone imagery, YOLOv8, computer vision, and full-stack web technologies.",
+      "Developed an AI-powered crop disease detection platform as a capstone project, combining drone imagery, YOLOv8, computer vision, Python, and full-stack web technologies.",
+    type: "project",
+  },
+
+  {
+    year: "2026",
+    title: "Attendify",
+    description:
+      "Developed a QR-based attendance management system for educational institutions using Next.js, TypeScript, Prisma, PostgreSQL, and Neon, with features for student management, attendance tracking, and reporting.",
+    type: "project",
+  },
+
+  {
+    year: "2026",
+    title: "UniKit",
+    description:
+      "Built an all-in-one web utility platform using React, JavaScript, Vite, Tailwind CSS, and a Python FastAPI backend, integrating tools such as image background removal and OCR-based text extraction.",
     type: "project",
   },
 
@@ -47,7 +63,7 @@ export const timeline: TimelineItem[] = [
     year: "2026",
     title: "Building What's Next",
     description:
-      "Continuing to expand my skills in full-stack development, artificial intelligence, machine learning, and mobile development while exploring professional opportunities.",
+      "Continuing to strengthen my skills in full-stack development, artificial intelligence, machine learning, and software engineering while pursuing professional opportunities.",
     type: "career",
   },
 ];
