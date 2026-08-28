@@ -5,7 +5,7 @@ import {
   useMotionValue,
   useTransform,
   animate,
-} from "framer-motion";
+} from "motion/react";
 import { useEffect, useSyncExternalStore } from "react";
 
 interface OrbitIconProps {

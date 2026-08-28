@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion, Variants } from "motion/react";
 import { TypeAnimation } from "react-type-animation";
 
 import HeroButtons from "./HeroButtons";
@@ -74,7 +74,7 @@ export default function Hero() {
         transition={{
           duration: 1.2,
         }}
-        className="absolute inset-0 -z-10 overflow-hidden"
+          className="absolute inset-0 -z-10 overflow-hidden"
       >
         <motion.div
           animate={{
@@ -232,7 +232,7 @@ export default function Hero() {
 
           <motion.div
             variants={itemVariants}
-            className="
+            className="mobile-ambient
               mt-6
               min-h-[48px]
               text-xl

@@ -5,7 +5,7 @@ import Image from "next/image";
 import {
   motion,
   Variants,
-} from "framer-motion";
+} from "motion/react";
 
 import {
   BarChart3,
@@ -68,6 +68,8 @@ export default function GitHubStats() {
           width={700}
           height={350}
           unoptimized
+          loading="lazy"
+          fetchPriority="low"
           className="w-full"
         />
       </StatCard>
@@ -85,6 +87,8 @@ export default function GitHubStats() {
           width={700}
           height={350}
           unoptimized
+          loading="lazy"
+          fetchPriority="low"
           className="w-full"
         />
       </StatCard>
@@ -103,6 +107,8 @@ export default function GitHubStats() {
             width={900}
             height={350}
             unoptimized
+            loading="lazy"
+            fetchPriority="low"
             className="mx-auto w-full max-w-3xl"
           />
         </StatCard>

@@ -4,7 +4,7 @@ import {
   motion,
   useMotionTemplate,
   useMotionValue,
-} from "framer-motion";
+} from "motion/react";
 
 import {
   SiNextdotjs,

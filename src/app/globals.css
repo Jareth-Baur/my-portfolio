@@ -92,6 +92,28 @@ body {
   opacity: 0.25;
 }
 
+@media (max-width: 767px) {
+  .mobile-performance .mobile-particles {
+    display: none;
+  }
+
+  .mobile-performance .mobile-ambient {
+    animation: none !important;
+    filter: blur(55px);
+    opacity: 0.12;
+  }
+
+  .mobile-performance [class*="blur-"] {
+    filter: none !important;
+  }
+
+  .mobile-performance .backdrop-blur,
+  .mobile-performance .backdrop-blur-xl {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}
+
 @keyframes float {
   0% {
     transform: translateY(0);

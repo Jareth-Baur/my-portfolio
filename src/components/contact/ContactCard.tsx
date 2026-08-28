@@ -7,7 +7,7 @@ import {
   useMotionTemplate,
   useMotionValue,
   Variants,
-} from "framer-motion";
+} from "motion/react";
 
 import {
   ArrowUpRight,

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Code2, BrainCircuit, Smartphone, GraduationCap } from "lucide-react";
 
 const interests = [

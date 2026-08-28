@@ -4,7 +4,7 @@ import {
   motion,
   useMotionValue,
   useSpring,
-} from "framer-motion";
+} from "motion/react";
 
 import { useEffect } from "react";
 import Image from "next/image";
@@ -128,12 +128,13 @@ export default function HeroImage() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="pointer-events-none absolute h-[450px] w-[450px] rounded-full bg-blue-500/20 blur-[100px]"
+        className="mobile-ambient pointer-events-none absolute h-[450px] w-[450px] rounded-full bg-blue-500/20 blur-[100px]"
       />
 
       {/* Particles */}
 
-      {particles.map((particle, index) => (
+      <div className="mobile-particles contents">
+        {particles.map((particle, index) => (
         <motion.div
           key={index}
           initial={{
@@ -168,7 +169,8 @@ export default function HeroImage() {
           }}
           className="pointer-events-none absolute h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.8)]"
         />
-      ))}
+        ))}
+      </div>
 
       {/* Outer Orbit Path */}
 
@@ -479,7 +481,7 @@ export default function HeroImage() {
           "
         >
           <Image
-            src="/next.JPG"
+            src="/next.webp"
             alt="Jareth Baur"
             fill
             priority

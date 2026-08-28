@@ -13,14 +13,11 @@ import Contact from "@/components/contact/Contact";
 
 import Reveal from "@/components/animations/Reveal";
 
-import LoadingScreen from "@/components/ui/LoadingScreen";
 import CustomCursor from "@/components/ui/CustomCursor";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen">
-      <LoadingScreen />
-
+    <main className="mobile-performance relative min-h-screen">
       <CustomCursor />
 
       <Background />

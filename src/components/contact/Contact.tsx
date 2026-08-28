@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion, Variants } from "motion/react";
 import {
   Mail,
   FileText,
@@ -46,7 +46,7 @@ export default function Contact() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="
+        className="mobile-ambient
           pointer-events-none
           absolute
           bottom-0
