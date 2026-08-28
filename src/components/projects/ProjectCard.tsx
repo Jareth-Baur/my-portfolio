@@ -18,9 +18,10 @@ import {
 import { FaGithub } from "react-icons/fa6";
 
 import TechBadge from "./TechBadge";
+import type { Project } from "@/data/projects";
 
 interface Props {
-  project: any;
+  project: Project;
   index: number;
 }
 

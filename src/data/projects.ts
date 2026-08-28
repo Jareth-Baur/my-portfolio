@@ -1,4 +1,25 @@
-export const projects = [
+export type ProjectType = "web" | "mobile" | "desktop";
+
+export interface Project {
+  slug: string;
+  title: string;
+  type: ProjectType;
+  tagline: string;
+  description: string;
+  problem: string;
+  solution: string;
+  github: string;
+  demo: string;
+  cover: string;
+  gallery: string[];
+  technologies: string[];
+  year: string;
+  status: string;
+  role: string;
+  featured: boolean;
+}
+
+export const projects: Project[] = [
   {
     slug: "cropeye",
 

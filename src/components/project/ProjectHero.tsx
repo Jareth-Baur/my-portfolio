@@ -7,9 +7,10 @@ import { motion } from "motion/react";
 
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
+import type { Project } from "@/data/projects";
 
 interface Props {
-  project: any;
+  project: Project;
 }
 
 export default function ProjectHero({ project }: Props) {

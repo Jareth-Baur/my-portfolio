@@ -5,9 +5,10 @@ import { motion } from "motion/react";
 
 import { ArrowUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
+import type { Project } from "@/data/projects";
 
 interface Props {
-  project: any;
+  project: Project;
 }
 
 const navigation = [

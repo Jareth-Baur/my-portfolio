@@ -32,7 +32,7 @@ export default function Footer() {
             <FaLinkedin size={22} />
           </a>
 
-          <a href="mailto:jarethbaur0223@gmail.com">
+          <a href="mailto:jareth.baur.dev@gmail.com">
             <Mail size={22} />
           </a>
         </div>
