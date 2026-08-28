@@ -4,14 +4,14 @@ A modern, responsive personal portfolio website built with **Next.js** and **Typ
 
 ##  Features
 
-- 🎨 Modern and responsive UI
-- ⚡ Built with Next.js App Router
-- 📱 Mobile-friendly design
-- 🌓 Light and dark mode support
-- 🖼️ Project showcase with image galleries
-- 📝 Detailed project pages
-- 🚀 Optimized performance
-- 💻 Clean and modular component architecture
+-  Modern and responsive UI
+-  Built with Next.js App Router
+-  Mobile-friendly design
+-  Light and dark mode support
+-  Project showcase with image galleries
+-  Detailed project pages
+-  Optimized performance
+-  Clean and modular component architecture
 
 ---
 
@@ -61,7 +61,7 @@ src/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Clone the repository
 
@@ -95,7 +95,7 @@ http://localhost:3000
 
 ---
 
-## 📦 Production Build
+##  Production Build
 
 Build the application:
 
@@ -139,11 +139,6 @@ public/
 
 ---
 
-##  License
-
-This project is open source and available under the MIT License.
-
----
 
 ##  Author
 
