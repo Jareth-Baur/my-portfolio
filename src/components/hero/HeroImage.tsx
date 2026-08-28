@@ -481,7 +481,7 @@ export default function HeroImage() {
           "
         >
           <Image
-            src="/next.webp"
+            src="/hero.webp"
             alt="Jareth Baur"
             fill
             priority
