@@ -144,7 +144,7 @@ public/
 
 **Jareth Baur**
 
-Bachelor of Science in Information Technology
+Bachelor Of Science In Information Technology
 
 GitHub: `https://github.com/Jareth-Baur`
 
